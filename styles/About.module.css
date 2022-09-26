@@ -1,0 +1,14 @@
+.aboutImg{
+    height: 300px;
+    width: auto;
+}
+.logo{
+    float: left;
+    height: 20px;
+    width: auto;
+    margin-right: 10px;
+    margin-top: 2px;
+}
+.grad{
+    background:linear-gradient(to right, #aee1f989,#f6ebe685,#f6ebe666)
+}

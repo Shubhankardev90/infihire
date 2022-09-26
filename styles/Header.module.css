@@ -1,0 +1,136 @@
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  background-color: white;
+  z-index: 9999;
+box-shadow: 0 0 10px #c8e3fa ;
+}
+
+.logo {
+  height: 30px;
+  width: auto;
+  position: relative;
+}
+.logo img {
+  height: 100%;
+  width: auto;
+}
+.navigationMenu {
+  display: flex;
+  column-gap: 10px;
+}
+.navigationMenu .navLinks {
+  color: black;
+  padding: 5px 8px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 3px;
+  display: inline;
+  position: relative;
+}
+.navigationMenu .navLinks::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 0;
+  left: -15px;
+  top: 0;
+  transition: width 0.2s;
+  transition-timing-function:ease-in-out;
+}
+.navigationMenu .navLinks:hover {
+  text-decoration: none;
+}
+.navigationMenu .navLinks:hover::before{
+    width: 100%;
+    background-color: #7c7c7c1d;
+    color: #06a9ff;
+    border-radius: 4px;
+    left: 0px;
+    top: 0;
+    transition:0.4s;
+    transition-timing-function:ease-in-out;
+   
+
+}
+.navigationMenu .activeNavLink {
+  color: white;
+  background-color: #06a9ff;
+  padding: 4px 8px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 5px;
+}
+.navigationMenu .activeNavLink:hover {
+    background-color: #7c7c7c1d;
+    color: #06a9ff;
+  text-decoration: none;
+}
+
+.headerSocialIcons {
+  display: flex;
+  column-gap: 10px;
+  cursor: pointer;
+}
+
+@media(max-width:48em){
+  .navigationMenu{
+    z-index: -999;
+    opacity: 0;
+    position: absolute;
+    transform:translateY(100%);
+    flex-direction: column;
+    display: flex;
+    right: -100vw;
+    background-color:white;
+    row-gap: 10px;
+    padding: 15px 20px;
+    min-width: 150px;
+    /* transition:0.3s; */
+    bottom: 0;
+  }
+  .navigationMenuActive{
+    opacity: 1;
+    z-index: 999;
+    position: absolute;
+    bottom: 0;
+    transform:translateY(100%);
+    flex-direction: column;
+    display: flex;
+    right: 0;
+    background-color:white;
+    row-gap: 10px;
+    padding: 15px 20px;
+    min-width: 150px;
+    transition:0.3s;
+
+  }
+  .logo{
+    padding-left:10px
+  }
+  .headerSocialIcons{
+   display:none;
+  } 
+  .header{
+    /* flex-direction: column; */
+    height: fit-content;
+    padding:10px 0;
+    row-gap: 10px;
+    /* align-items: flex-start; */
+  }
+  .headerTrigger{
+    position: absolute;
+   top: 50%;
+   transform: translateY(-50%);
+   right: 10px;
+  }
+}

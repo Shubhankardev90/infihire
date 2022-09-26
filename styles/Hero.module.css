@@ -1,0 +1,21 @@
+ .hero{
+  position:relative;
+  background:linear-gradient(to right , #06a8ff25,#fefefe,#ffffff);
+  padding:30px 0;
+  min-height: 100vh;
+ }
+ .rightContent img{
+  width:100%;
+  height: auto;
+ }
+
+.leftContents{
+  position: relative;
+  background-color:transparent;
+}
+
+@media(min-height:650px){
+  .hero{
+    min-height: 50vh;
+  }
+}

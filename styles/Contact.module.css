@@ -1,0 +1,6 @@
+@media(max-width:800px){
+    .contactImage{
+        height: 300px;
+        width: auto;
+    }
+}
